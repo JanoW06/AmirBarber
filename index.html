@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Friseur Barbier Amir – Herrenfriseur & Barbershop in Freiberg</title>
+  <meta name="description" content="Moderner Barbershop in Freiberg. Präzise Herrenhaarschnitte, professionelle Bartpflege und klassische Rasur. Jetzt Termin über WhatsApp oder Telefon sichern.">
+  <meta name="keywords" content="Barbier in Freiberg, Herrenfriseur Freiberg, Barbershop Freiberg, Bartpflege Freiberg, Rasur Freiberg">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:title" content="Friseur Barbier Amir – Stil beginnt beim Schnitt" />
+  <meta property="og:description" content="Herrenhaarschnitte, Bartpflege & Rasur auf höchstem Niveau in Freiberg." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://deinedomain.de/" />
+  <meta property="og:image" content="https://deinedomain.de/og-cover.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="/favicon.ico" />
+
+  <!-- Fonts: Moderne Sans-Serif (fette Headlines) -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg:#0b0b0b;          /* Tiefschwarz */
+      --text:#f5f5f5;        /* Warmes Weiß */
+      --muted:#bdbdbd;       /* Grau */
+      --gold:#c8a254;        /* Elegant Gold */
+      --card:#121212;        /* Dunkles Grau für Flächen */
+      --line:#262626;        /* Haarlinie/Trenner */
+      --maxw:1200px;
+      --radius:14px;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Manrope,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;scroll-behavior:smooth}
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block;border-radius:12px}
+    /* Header */
+    .header{position:sticky;top:0;z-index:50;background:rgba(11,11,11,.8);backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--line)}
+    .nav{max-width:var(--maxw);margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:14px 20px}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:38px;height:38px;border-radius:50%;background:linear-gradient(140deg,var(--gold),#f1d28a);box-shadow:inset 0 0 0 2px #0004}
+    .brand h1{font-size:18px;margin:0;font-weight:800;letter-spacing:.5px}
+    .menu{display:flex;gap:22px;align-items:center}
+    .menu a{font-weight:600;color:var(--muted)}
+    .menu a:hover{color:var(--text)}
+    .cta{padding:10px 16px;border-radius:999px;background:var(--gold);color:#111;font-weight:800;box-shadow:var(--shadow)}
+    .burger{display:none;border:1px solid var(--line);border-radius:10px;padding:8px 10px}
+    /* Hero */
+    .hero{position:relative;isolation:isolate;min-height:82vh;display:grid;place-items:center;overflow:hidden;border-bottom:1px solid var(--line)}
+    .hero::before{content:"";position:absolute;inset:0;background:url('hero.jpg') center/cover no-repeat;opacity:.28;filter:grayscale(25%) contrast(105%)}
+    .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.6),rgba(0,0,0,.7))}
+    .hero-inner{position:relative;z-index:1;max-width:var(--maxw);padding:80px 20px;display:grid;gap:20px;text-align:center}
+    .kicker{color:var(--gold);font-weight:800;letter-spacing:.18em;text-transform:uppercase;font-size:12px}
+    .headline{font-size:clamp(32px,6vw,56px);line-height:1.05;margin:0;font-weight:800}
+    .sub{max-width:800px;margin:0 auto;color:var(--muted);font-size:18px}
+    .cta-row{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:8px}
+    .cta-outline{padding:10px 16px;border-radius:999px;border:1px solid var(--gold);color:var(--gold);font-weight:700}
+    .cta-outline:hover{background:#1a1a1a}
+    /* Sections */
+    section{padding:80px 20px;border-bottom:1px solid var(--line)}
+    .container{max-width:var(--maxw);margin:0 auto}
+    .grid-2{display:grid;grid-template-columns:1.1fr .9fr;gap:36px}
+    .card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;box-shadow:var(--shadow)}
+    h2{font-size:32px;margin:0 0 16px 0}
+    p{color:#dcdcdc}
+    .muted{color:var(--muted)}
+    /* Leistungen */
+    .price-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .price-item{display:flex;justify-content:space-between;gap:16px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:#111}
+    .price-item b{font-weight:700}
+    .group-title{margin:26px 0 10px;font-weight:800;color:var(--gold);letter-spacing:.08em;text-transform:uppercase;font-size:12px}
+    /* Galerie */
+    .gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:12px}
+    .gallery img{width:100%;height:100%;object-fit:cover;aspect-ratio:1/1}
+    .g1{grid-column:span 6}.g2{grid-column:span 3}.g3{grid-column:span 3}
+    /* Bewertungen */
+    .reviews{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .review{background:#111;border:1px solid var(--line);border-radius:14px;padding:18px}
+    .stars{color:var(--gold);font-weight:800;letter-spacing:2px}
+    /* Kontakt */
+    .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+    .contact-card li{margin:10px 0;color:#dcdcdc}
+    .chip{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);padding:8px 12px;border-radius:999px}
+    iframe{border:0;border-radius:12px}
+    /* Footer */
+    footer{padding:40px 20px;color:var(--muted)}
+    .footer-inner{max-width:var(--maxw);margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:12px;border-top:1px solid var(--line);padding-top:20px}
+    /* Mobile */
+    @media (max-width:980px){
+      .grid-2,.contact-grid{grid-template-columns:1fr}
+      .price-grid{grid-template-columns:1fr}
+      .reviews{grid-template-columns:1fr}
+      .menu{display:none}
+      .burger{display:block}
+      .gallery{grid-template-columns:repeat(6,1fr)}
+      .g1{grid-column:span 6}.g2{grid-column:span 3}.g3{grid-column:span 3}
+    }
+    /* Simple reveal animations */
+    .reveal{opacity:0;transform:translateY(8px);transition:opacity .6s ease, transform .6s ease}
+    .reveal.show{opacity:1;transform:none}
+  </style>
+
+  <!-- LocalBusiness Schema -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Barbershop",
+    "name":"Friseur Barbier Amir",
+    "image":"https://deinedomain.de/og-cover.jpg",
+    "url":"https://deinedomain.de/",
+    "telephone":"+49-1729537567",
+    "address":{
+      "@type":"PostalAddress",
+      "streetAddress":"Petersstraße 20",
+      "addressLocality":"Freiberg",
+      "postalCode":"09599",
+      "addressCountry":"DE"
+    },
+    "openingHoursSpecification":[
+      {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"],"opens":"09:00","closes":"19:00"}
+    ],
+    "sameAs":["https://instagram.com/friseur_barbier_amir"],
+    "priceRange":"€€"
+  }
+  </script>
+</head>
+<body>
+
+  <header class="header" aria-label="Hauptnavigation">
+    <nav class="nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <h1>Friseur Barbier Amir</h1>
+      </div>
+      <div class="menu" role="menubar">
+        <a href="#about" role="menuitem">Über uns</a>
+        <a href="#services" role="menuitem">Leistungen</a>
+        <a href="#gallery" role="menuitem">Galerie</a>
+        <a href="#reviews" role="menuitem">Bewertungen</a>
+        <a href="#contact" role="menuitem">Kontakt</a>
+        <a class="cta" href="https://wa.me/491729537567?text=Hallo%20Amir,%20ich%20m%C3%B6chte%20einen%20Termin%20vereinbaren." aria-label="Jetzt Termin per WhatsApp buchen">Jetzt Termin buchen</a>
+      </div>
+      <button class="burger" aria-label="Menü öffnen" onclick="toggleMenu()">☰</button>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <div class="hero-inner reveal">
+      <div class="kicker">Stil beginnt beim Schnitt</div>
+      <h2 class="headline">Friseur Barbier Amir</h2>
+      <p class="sub">Moderner Barbershop mit klassischem Handwerk. Herrenhaarschnitte, Bartpflege und Styling auf höchstem Niveau – in Freiberg.</p>
+      <div class="cta-row">
+        <a class="cta" href="tel:+491729537567" aria-label="Jetzt anrufen">Jetzt anrufen</a>
+        <a class="cta-outline" href="https://wa.me/491729537567?text=Hallo%20Amir,%20ich%20m%C3%B6chte%20einen%20Termin%20vereinbaren.">WhatsApp-Termin</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="container grid-2">
+      <div class="card reveal">
+        <h2>Über uns</h2>
+        <p>Bei <b>Friseur Barbier Amir</b> verbinden wir klassische Handwerkskunst mit modernen Techniken. Unser Ziel: Jeder Kunde verlässt den Salon mit einem perfekten Schnitt und einem selbstbewussten Look. Ob Haarschnitt, Bartpflege oder Rasur – hier stehen Qualität und Stil an erster Stelle.</p>
+        <p class="muted">Unser Salon ist dein Ort für präzise Lines, saubere Fades und entspannte Atmosphäre.</p>
+      </div>
+      <div class="reveal">
+        <img src="amir-portrait.jpg" alt="Amir bei der Arbeit im Barbershop" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <h2 class="reveal">Unsere Leistungen</h2>
+
+      <div class="group-title reveal">Herren</div>
+      <div class="price-grid">
+        <div class="price-item"><span>Schneiden, Föhnen + Stylen</span><b>18,00 €</b></div>
+        <div class="price-item"><span>Waschen, Schneiden, Föhnen + Stylen</span><b>23,00 €</b></div>
+        <div class="price-item"><span>Maschinenschnitt komplett</span><b>15,00 €</b></div>
+        <div class="price-item"><span>Haarmuster</span><b>+ 5,00 €</b></div>
+        <div class="price-item"><span>Färben</span><b>ab 18,00 €</b></div>
+        <div class="price-item"><span>Bartrasur komplett</span><b>10,00 €</b></div>
+        <div class="price-item"><span>Bart stutzen + Kontur</span><b>12,00 €</b></div>
+        <div class="price-item"><span>Premiumpaket (Haare + Bart + Augenbrauen)</span><b>30,00 €</b></div>
+        <div class="price-item"><span>Kinder</span><b>18,00 €</b></div>
+      </div>
+
+      <div class="group-title reveal">Haarentfernung & Extras</div>
+      <div class="price-grid">
+        <div class="price-item"><span>Augenbrauen zupfen oder mit Rasiermesser</span><b>5,00 €</b></div>
+        <div class="price-item"><span>Augenbrauen zupfen + färben</span><b>10,00 €</b></div>
+        <div class="price-item"><span>Augenbrauen + Oberlippe zupfen</span><b>10,00 €</b></div>
+        <div class="price-item"><span>Gesicht komplett zupfen</span><b>15,00 €</b></div>
+        <div class="price-item"><span>Nasenhaar + Ohrenhaar Waxing</span><b>5,00 €</b></div>
+      </div>
+
+      <div class="cta-row" style="margin-top:20px">
+        <a class="cta" href="https://wa.me/491729537567?text=Hallo%20Amir,%20ich%20m%C3%B6chte%20eine%20Leistung%20buchen.">Termin über WhatsApp</a>
+        <a class="cta-outline" href="tel:+491729537567">Telefonisch buchen</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <div class="container">
+      <h2 class="reveal">Galerie</h2>
+      <p class="muted reveal">Eindrücke aus dem Salon – mehr auf Instagram: <a class="chip" href="https://instagram.com/friseur_barbier_amir" target="_blank" rel="noopener"> @friseur_barbier_amir</a></p>
+
+      <!-- Statische Galerie (eigene Bilder einfügen) -->
+      <div class="gallery reveal">
+        <img class="g2" src="cut-fade.jpg" alt="Sauberer Skin Fade" loading="lazy">
+        <img class="g3" src="beard-trim.jpg" alt="Präzise Bartkontur" loading="lazy">
+        <img class="g1" src="shop-interior.jpg" alt="Interieur des Barbershops" loading="lazy">
+        <img class="g2" src="hot-towel.jpg" alt="Klassische Rasur mit heißem Handtuch" loading="lazy">
+        <img class="g3" src="styling.jpg" alt="Styling mit Finish" loading="lazy">
+      </div>
+
+      <!-- Optional: Instagram Post Embeds (ersetze die Links durch echte Post-URLs) -->
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/POST_ID1/" data-instgrm-version="14" style="margin-top:18px; background:#111;border:1px solid var(--line);border-radius:12px;padding:0;"></blockquote>
+      <script async src="//www.instagram.com/embed.js"></script>
+    </div>
+  </section>
+
+  <section id="reviews">
+    <div class="container">
+      <h2 class="reveal">Bewertungen</h2>
+      <div class="reviews">
+        <!-- Platzhalter-Rezensionen – später durch echte Google-Reviews ersetzen -->
+        <div class="review reveal">
+          <div class="stars" aria-label="5 von 5 Sternen">★★★★★</div>
+          <p>„Top Beratung, präziser Schnitt und entspannte Stimmung. Komme auf jeden Fall wieder!“</p>
+          <span class="muted">– Daniel S.</span>
+        </div>
+        <div class="review reveal">
+          <div class="stars">★★★★★</div>
+          <p>„Bartkontur perfekt gezogen. Man merkt die Erfahrung. Absolute Empfehlung!“</p>
+          <span class="muted">– Mehmet A.</span>
+        </div>
+        <div class="review reveal">
+          <div class="stars">★★★★★</div>
+          <p>„Schnelle Terminvergabe via WhatsApp, fairer Preis und hochwertiges Ergebnis.“</p>
+          <span class="muted">– Jonas L.</span>
+        </div>
+      </div>
+      <div class="cta-row" style="margin-top:18px">
+        <a class="cta-outline" href="https://maps.google.com/?q=Friseur%20Barbier%20Amir%20Freiberg" target="_blank" rel="noopener">Mehr Bewertungen auf Google</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2 class="reveal">Kontakt & Öffnungszeiten</h2>
+
+      <div class="contact-grid">
+        <div class="card contact-card reveal" aria-label="Kontaktmöglichkeiten">
+          <ul style="list-style:none;padding:0;margin:0">
+            <li><span class="chip">📍</span> Petersstraße 20, 09599 Freiberg</li>
+            <li><span class="chip">📞</span> <a href="tel:+491729537567">+49 172 9537567</a></li>
+            <li><span class="chip">💬</span> <a href="https://wa.me/491729537567?text=Hallo%20Amir,%20ich%20m%C3%B6chte%20einen%20Termin%20vereinbaren.">WhatsApp Termin</a></li>
+            <li><span class="chip">✉️</span> <a href="mailto:AmirBarberFreiberg@gmail.com">AmirBarberFreiberg@gmail.com</a></li>
+            <li><span class="chip">⏰</span> Mo–Sa 09:00–19:00 · So/Feiertage geschlossen</li>
+            <li><span class="chip">📷</span> <a href="https://instagram.com/friseur_barbier_amir" target="_blank" rel="noopener">@friseur_barbier_amir</a></li>
+          </ul>
+        </div>
+
+        <div class="reveal" aria-label="Karte">
+          <!-- Google Maps Embed -->
+          <iframe title="Google Maps – Friseur Barbier Amir" src="https://www.google.com/maps?q=Petersstraße+20+09599+Freiberg&output=embed" width="100%" height="360" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+
+      <div class="cta-row" style="margin-top:22px">
+        <a class="cta" href="tel:+491729537567">Jetzt anrufen</a>
+        <a class="cta-outline" href="https://wa.me/491729537567?text=Hallo%20Amir,%20ich%20m%C3%B6chte%20einen%20Termin%20vereinbaren.">WhatsApp schreiben</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <small>© <span id="year"></span> Friseur Barbier Amir – Barbershop in Freiberg</small>
+      <div style="display:flex;gap:12px">
+        <a href="impressum.html" class="muted">Impressum</a>
+        <a href="datenschutz.html" class="muted">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menü (einfach)
+    function toggleMenu(){
+      const m = document.querySelector('.menu');
+      m.style.display = (m.style.display==='flex' ? 'none' : 'flex');
+    }
+    // Reveal on scroll
+    const io = new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('show'); io.unobserve(e.target); }
+      });
+    },{threshold:.15});
+    document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+    // Jahr im Footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+    // Smooth scroll fix for sticky header
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', (e)=>{
+        const id = a.getAttribute('href').slice(1);
+        const el = document.getElementById(id);
+        if(!el) return;
+        e.preventDefault();
+        const y = el.getBoundingClientRect().top + window.scrollY - 70;
+        window.scrollTo({top:y, behavior:'smooth'});
+      });
+    });
+  </script>
+
+</body>
+</html>
